@@ -1,1 +1,2 @@
 jeMICw6PoSLtDlVe
+"proxy": "http://localhost:5000",
