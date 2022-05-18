@@ -31,7 +31,7 @@ export default function Auth(props) {
         email: inputs.email,
         password: inputs.password,
       })
-      .catch((err) => console.log(err));
+      // .catch((err) => console.log(err));
 
     const data = await res.data;
     return data;
@@ -46,7 +46,7 @@ export default function Auth(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputs);
+    // console.log(inputs);
     if (isRegistred) {
       auth("signup")
         .then((data) => localStorage.setItem("userId", data.user._id))

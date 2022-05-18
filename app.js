@@ -19,8 +19,8 @@ app.use("/api/users", usersRourer);
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => app.listen(port))
-  .then(() => console.log(`Connected to Database localhost ${port}...`))
-  .catch((err) => console.log(err));
+  // .then(() => console.log(`Connected to Database localhost ${port}...`))
+  // .catch((err) => console.log(err));
 
 // const __dirname = path.resolve()
 // console.log(__dirname);
