@@ -6,7 +6,7 @@ export const getAllUsers = async (req, res, next) => {
   try {
     users = await User.find();
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
   if (!users) {
     return res.status(404).json({ message: "No Users Found" });
@@ -20,7 +20,7 @@ export const getUser = async (req, res, next) => {
   try {
     user = await User.findById(userId)
   } catch (error) {
-    console.log(error)
+    // console.log(error)
   }
   if(!user){
     return res.status(404).json({ message: "User not found" });
@@ -34,7 +34,7 @@ export const signUp = async (req, res, next) => {
   try {
     existingUser = await User.findOne({ email });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
   if (existingUser) {
     return res
@@ -51,7 +51,7 @@ export const signUp = async (req, res, next) => {
   try {
     await user.save();
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
   return res.status(201).json({ user });
 };
@@ -62,7 +62,7 @@ export const logIn = async (req, res, next) => {
   try {
     existingUser = await User.findOne({ email });
   } catch (err) {
-    return console.log(err);
+    // return console.log(err);
   }
   if (!existingUser) {
     return res.status(404).json({ message: "Couldnt Find User By This Email" });
