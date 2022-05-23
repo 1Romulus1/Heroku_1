@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 const userSchema = new Schema({
   name: {
     type: String,
@@ -16,7 +16,13 @@ const userSchema = new Schema({
     required: true,
     minlength: 6,
   },
-  collections: [{ type: mongoose.Types.ObjectId, ref: "Collection", required: true }],
+  collections: [
+    {
+      type: mongoose.Types.ObjectId,
+      ref: "Collection",
+      required: true,
+    },
+  ],
 });
 
-export default mongoose.model("User", userSchema)
+export default mongoose.model("User", userSchema);

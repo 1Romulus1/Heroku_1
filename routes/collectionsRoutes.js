@@ -5,7 +5,7 @@ const collectionsRouter = express.Router()
 
 collectionsRouter.get('/', getAllCollections);
 collectionsRouter.get('/:id', getAllUserCollections);
-collectionsRouter.post("/userId/create", createCollection);
+collectionsRouter.post("/create", createCollection);
 collectionsRouter.post("/:id", updateCollection);
 collectionsRouter.delete("/:id", deleteCollection);
 

@@ -51,14 +51,14 @@ export default function Auth(props) {
       auth("signup")
         .then((data) => localStorage.setItem("userId", data.user._id))
         .then(() => dispatch(login()))
-        .then(() => naviagte("/userCollections"));
-        // .then((data) => console.log(data));
+        .then(() => naviagte("/userCollections"))
+        .then((data) => console.log(data));
     } else {
       auth("login")
         .then((data) => localStorage.setItem("userId", data.user._id))
         .then(() => dispatch(login()))
-        .then(() => naviagte("/userCollections"));
-        // .then((data) => console.log(data))
+        .then(() => naviagte("/userCollections"))
+        .then((data) => console.log(data))
     }
   };
   return (
